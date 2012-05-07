@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name = 'ri_cal'
   s.version = RiCal::VERSION
   s.authors = ['Yen-Ju Chen', 'Rick DeNatale']
-  s.date = '2011-02-13'
+  s.date = '2012-05-07'
 
   s.description = %q{A new Ruby implementation of RFC2445 iCalendar.
 
@@ -20,15 +20,13 @@ A Google group for discussion of this library has been set up http://groups.goog
   s.email = 'yjchenx@gmail.com'
   s.extra_rdoc_files = [
     "History.txt",
-    "README.txt",
-    "copyrights.txt"
+    "README.rdoc",
   ]
   s.files = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
 
   s.homepage = 'http://github.com/yjchen/ri_cal'
   s.require_paths = ["lib"]
-#  s.rubygems_version = %q{1.3.7}
   s.summary = 'a new implementation of RFC2445 in Ruby'
 
   # specify any dependencies here; for example:
