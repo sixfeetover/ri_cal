@@ -1,9 +1,6 @@
 module RiCal
   module CoreExtensions #:nodoc:
     module Time #:nodoc:
-      #- ©2009 Rick DeNatale
-      #- All rights reserved. Refer to the file README.txt for the license
-      #
       # Provides a tzid attribute for ::Time and ::DateTime
       module TzidAccess
         # The tzid attribute is used by RiCal, it should be a valid timezone identifier within a calendar,

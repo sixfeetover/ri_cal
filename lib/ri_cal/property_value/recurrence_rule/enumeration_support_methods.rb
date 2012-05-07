@@ -1,8 +1,6 @@
 module RiCal
   class PropertyValue
     class RecurrenceRule < PropertyValue
-      #- ©2009 Rick DeNatale, All rights reserved. Refer to the file README.txt for the license
-      #
       module EnumerationSupportMethods # :nodoc:
 
         # if the recurrence rule has a bysetpos part we need to search starting with the

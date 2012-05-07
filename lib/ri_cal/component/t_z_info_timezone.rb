@@ -111,8 +111,8 @@ class RiCal::Component::TZInfoTimezone < RiCal::Component::Timezone
   end
   
   # convert time from this time zone to utc time
-  def local_to_utc(time)
-    @tzinfo_timezone.local_to_utc(time.to_ri_cal_ruby_value)
+  def local_to_utc(time, dst_ambiguity=nil)
+    @tzinfo_timezone.local_to_utc(time.to_ri_cal_ruby_value, dst_ambiguity)
   end
 
   # convert time from utc time to this time zone
@@ -126,7 +126,9 @@ class RiCal::Component::TZInfoTimezone < RiCal::Component::Timezone
   end
 
   def export_local_to(export_stream, local_start, local_end) #:nodoc:
-    export_utc_to(export_stream, local_to_utc(local_start.to_ri_cal_ruby_value), local_to_utc(local_end.to_ri_cal_ruby_value))
+    export_utc_to(export_stream, 
+                  local_to_utc(local_start.to_ri_cal_ruby_value, true), 
+                  local_to_utc(local_end.to_ri_cal_ruby_value, false))
   end
 
   def to_rfc2445_string(utc_start, utc_end) #:nodoc:

@@ -1,7 +1,4 @@
 module RiCal
-  #- ©2009 Rick DeNatale
-  #- All rights reserved. Refer to the file README.txt for the license
-  #
   # OccurrenceEnumerator provides common methods for CalendarComponents that support recurrence
   # i.e. Event, Journal, Todo, and TimezonePeriod
   module OccurrenceEnumerator

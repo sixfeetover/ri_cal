@@ -1,6 +1,4 @@
-#- ©2009 Rick DeNatale, All rights reserved. Refer to the file README.txt for the license
-
-require File.join(File.dirname(__FILE__), %w[.. spec_helper])
+require 'spec_helper'
 
 describe "http://rick_denatale.lighthouseapp.com/projects/30941/tickets/17" do
   it "should parse this" do
@@ -268,5 +266,16 @@ END:VCALENDAR)
       cal = RiCal.parse_string(cal_string).first
       cal.x_wr_calname.first.should == " AFC Ajax Eredivisie wedstrijden 2010 - 2011"
     end
-end
 
+  it "should define x-properties correctly" do
+    calendar = RiCal.Calendar
+    calendar.add_x_property 'x_wr_calname', 'Lifetracker'
+    calendar.export.should == %Q(BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+X-WR-CALNAME:Lifetracker
+END:VCALENDAR
+)
+  end
+end

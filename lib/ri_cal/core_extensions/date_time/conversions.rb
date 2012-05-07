@@ -2,9 +2,6 @@ require 'date'
 module RiCal
   module CoreExtensions #:nodoc:
     module DateTime #:nodoc:
-      #- ©2009 Rick DeNatale
-      #- All rights reserved. Refer to the file README.txt for the license
-      #
       module Conversions #:nodoc:
         # Return an RiCal::PropertyValue::DateTime representing the receiver
         def to_ri_cal_date_time_value(timezone_finder = nil) #:nodoc:

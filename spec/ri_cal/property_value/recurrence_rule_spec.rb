@@ -1,8 +1,4 @@
-#- ©2009 Rick DeNatale, All rights reserved. Refer to the file README.txt for the license
-
-require File.join(File.dirname(__FILE__), %w[.. .. spec_helper])
-
-require 'rubygems'
+require 'spec_helper'
 
 FirstOfMonth = RiCal::PropertyValue::RecurrenceRule::RecurringMonthDay.new(1)
 TenthOfMonth = RiCal::PropertyValue::RecurrenceRule::RecurringMonthDay.new(10)

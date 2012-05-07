@@ -1,8 +1,6 @@
 module RiCal
   class PropertyValue
     class RecurrenceRule < PropertyValue
-      #- ©2009 Rick DeNatale, All rights reserved. Refer to the file README.txt for the license
-      #
       class Enumerator # :nodoc:
         # base_time gets changed everytime the time is updated by the recurrence rule's frequency
         attr_accessor :start_time, :duration, :next_time, :recurrence_rule, :base_time

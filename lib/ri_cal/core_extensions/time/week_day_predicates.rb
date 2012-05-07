@@ -1,9 +1,6 @@
 module RiCal
   module CoreExtensions #:nodoc:
     module Time #:nodoc:
-      #- ©2009 Rick DeNatale
-      #- All rights reserved. Refer to the file README.txt for the license
-      #
       # Provide predicate and related methods for use by the RiCal gem
       # This module is included by Time, Date, and DateTime
       module WeekDayPredicates

@@ -1,9 +1,6 @@
 module RiCal
   module CoreExtensions #:nodoc:
     module String #:nodoc:
-      #- ©2009 Rick DeNatale
-      #- All rights reserved. Refer to the file README.txt for the license
-      #
       module Conversions #:nodoc:
         def to_ri_cal_text_property
            PropertyValue::Text.new(nil, :value => self)

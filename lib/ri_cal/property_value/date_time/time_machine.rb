@@ -1,8 +1,6 @@
 module RiCal
   class PropertyValue
     class DateTime
-      #- ©2009 Rick DeNatale, All rights reserved. Refer to the file README.txt for the license
-      #
       # Methods for DateTime which support getting values at different point in time.
       module TimeMachine
 

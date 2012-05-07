@@ -1,7 +1,5 @@
 module RiCal
   class PropertyValue
-    #- ©2009 Rick DeNatale, All rights reserved. Refer to the file README.txt for the license
-    #
     class UtcOffset < PropertyValue # :nodoc:
       attr_accessor :sign, :hours, :minutes, :seconds
 

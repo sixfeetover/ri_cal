@@ -1,7 +1,4 @@
 module RiCal
-  #- ©2009 Rick DeNatale
-  #- All rights reserved. Refer to the file README.txt for the license
-  #
   # FastDateTime mimics the Ruby Standard library DateTime class but avoids the use of Rational
   # Instead of using a Rational for the utc offset, FastDateTime uses an integer seconds value
   class FastDateTime

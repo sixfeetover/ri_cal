@@ -1,7 +1,4 @@
 module RiCal
-  #- ©2009 Rick DeNatale
-  #- All rights reserved. Refer to the file README.txt for the license
-  #
   # FloatingTimezone represents the 'time zone' for a time or date time with no timezone
   # Times with floating timezones are always interpreted in the timezone of the observer
   class FloatingTimezone
