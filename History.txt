@@ -1,4 +1,5 @@
 === v0.9.0 2012-05-07
+   Move copyright statement out of source code.
    Since Rails > 3 also use tzinfo, no reason to test against activesupport.
    Clean up.
    Fork from rubyredrick.
