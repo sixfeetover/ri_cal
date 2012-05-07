@@ -2,7 +2,6 @@ coverage/
 tmp/
 pkg/
 profiles/
-performance_data/
 doc/
 \.DS_Store
 .ackrc
