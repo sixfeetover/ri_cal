@@ -1,7 +1,6 @@
 == RI_CAL -- a new implementation of RFC2445 in Ruby
-http://ri-cal.rubyforge.org/
 
-by Rick DeNatale
+by Yen-Ju Chen (forked from Rick DeNatale at http://ri-cal.rubyforge.org/)
 
 == DESCRIPTION:
 
