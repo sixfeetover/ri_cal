@@ -1,4 +1,5 @@
 === v0.9.0 2012-05-07
+   Borrow from https://github.com/xaop/ri_cal/commit/47f382cc0bb6ddb085686354acbf6788719a37e8
    Move copyright statement out of source code.
    Since Rails > 3 also use tzinfo, no reason to test against activesupport.
    Clean up.

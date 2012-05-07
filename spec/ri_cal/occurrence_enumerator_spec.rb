@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'spec_helper'
 
 def mock_enumerator(name, next_occurrence)

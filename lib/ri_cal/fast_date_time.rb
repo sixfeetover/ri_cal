@@ -14,6 +14,22 @@ module RiCal
       @hour, @min, @sec, @offset = hour, min, sec, offset_seconds
     end
 
+    def self.parse(val, just_date = false)
+      if match_data = /\A(\d{4})(\d{2})(\d{2})(?:T(\d{2})(\d{2})(\d{2})(?:(Z)|(?:(-|\+)(\d{2})(\d{2})))?)?\z/.match(val.strip)
+        year, month, day, hour, minute, second, utc, tzsign, tzhour, tzminute = *match_data[1..-1]
+        if just_date
+          hour, minute, second, timezone = 0
+        elsif hour
+          timezone = utc ? 0 : tzsign ? (tzsign == '-' ? -1 : 1) * (tzhour.to_i * 60 + tzminute.to_i) * 60 : 0
+        end
+        new(year.to_i, month.to_i, day.to_i, hour.to_i, minute.to_i, second.to_i, timezone.to_i)
+      elsif just_date
+        from_date_time(::DateTime.parse(::DateTime.parse(val).strftime("%Y%m%d")))
+      else
+        from_date_time(::DateTime.parse(val))
+      end
+    end
+
     def self.from_date_time(date_time)
       new(date_time.year, date_time.month, date_time.day, date_time.hour, date_time.min, date_time.sec, (date_time.offset * SECONDS_IN_A_DAY).to_i)
     end
