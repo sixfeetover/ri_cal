@@ -34,9 +34,9 @@ module RiCal
 
       def export_properties_to(export_stream) # :nodoc:
         prodid_property.params["X-RICAL-TZSOURCE"] = @tz_source if @tz_source
+        export_prop_to(export_stream, "VERSION", version_property)
         export_prop_to(export_stream, "PRODID", prodid_property)
         export_prop_to(export_stream, "CALSCALE", calscale_property)
-        export_prop_to(export_stream, "VERSION", version_property)
         export_prop_to(export_stream, "METHOD", method_property)
       end
 
