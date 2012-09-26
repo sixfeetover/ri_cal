@@ -6,10 +6,10 @@ module RiCal
 
       # return the the CALSCALE property
       # which will be an instances of RiCal::PropertyValueText
-      # 
+      #
       # [purpose (from RFC 2445)]
       # This property defines the calendar scale used for the calendar information specified in the calendar object.
-      # 
+      #
       # see RFC 2445 4.7.1 p 73
       def calscale_property
         @calscale_property ||= RiCal::PropertyValue::Text.convert(self, "GREGORIAN")
@@ -28,10 +28,10 @@ module RiCal
 
       # return the the METHOD property
       # which will be an instances of RiCal::PropertyValueText
-      # 
+      #
       # [purpose (from RFC 2445)]
       # This property defines the iCalendar object method associated with the calendar object
-      # 
+      #
       # see RFC 2445 4.7.2 p 74-75
       def method_property
         @method_property
@@ -61,10 +61,10 @@ module RiCal
 
       # return the the PRODID property
       # which will be an instances of RiCal::PropertyValueText
-      # 
+      #
       # [purpose (from RFC 2445)]
       # This property specifies the identifier for the product that created the iCalendar object.
-      # 
+      #
       # see RFC 2445 4.7.3 pp 75-76
       def prodid_property
         @prodid_property ||= RiCal::PropertyValue::Text.convert(self, "-//com.denhaven2/NONSGML ri_cal gem//EN")
@@ -94,10 +94,10 @@ module RiCal
 
       # return the the VERSION property
       # which will be an instances of RiCal::PropertyValueText
-      # 
+      #
       # [purpose (from RFC 2445)]
       # This property specifies the identifier corresponding to thehighest version number or the minimum and maximum range of the iCalendar specification that is required in order to interpret the iCalendar object.
-      # 
+      #
       # see RFC 2445 4.7.4 pp 76-77
       def version_property
         @version_property ||= RiCal::PropertyValue::Text.convert(self, "2.0")
